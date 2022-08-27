@@ -1,6 +1,14 @@
 class D51 {
-    height() {
+    static height() {
         return D51.STR.split('\n').length + D51.WHL1.split('\n').length;
+    }
+
+    static wheel(offset) {
+        const wheels = [D51.WHL1, D51.WHL2, D51.WHL3, D51.WHL4, D51.WHL5, D51.WHL6];
+        if (offset > wheels.length) {
+            offset = 0;
+        }
+        return wheels[wheels.length % (offset + 1)];
     }
 
     static get STR() {
@@ -11,8 +19,7 @@ class D51 {
                  /     |  |   H  |  |     |   |         ||_| |_||   
                 |      |  |   H  |__--------------------| [___] |   
                 | ________|___H__/__|_____/[][]~\\_______|       |   
-                |/ |   |-----------I_____I [][] []  D   |=======|__ 
-                `;
+                |/ |   |-----------I_____I [][] []  D   |=======|__ `;
     }
 
     static get WHL1() {
