@@ -3,6 +3,7 @@ const define = require('./define');
 const { setTimeout } = require('timers/promises');
 
 const windowWidth = 60;
+const refreshRate = 40;
 
 module.exports = {
     run,
@@ -13,9 +14,9 @@ async function run() {
     const position = editor.selection.active;
     const startLine = position.line;
 
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < define.D51.width; i++) {
         await draw(editor, startLine, i);
-        await setTimeout(100);
+        await setTimeout(refreshRate);
     }
 }
 

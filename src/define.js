@@ -1,6 +1,12 @@
+const { maxHeaderSize } = require("http");
+
 class D51 {
+    static get width() {
+        return 100;
+    }
+
     static height() {
-        return D51.SMOKE1.split('\n').length + D51.STR.split('\n').length + D51.WHL[0].split('\n').length;
+        return D51.SMOKE[0].split('\n').length + D51.STR.split('\n').length + D51.WHL[0].split('\n').length;
     }
 
     static wheel(offset) {
@@ -8,7 +14,7 @@ class D51 {
     }
 
     static smoke(offset) {
-        return D51.SMOKE1;
+        return D51.SMOKE[offset % D51.SMOKE.length];
     }
 
     static get STR() {
@@ -51,14 +57,23 @@ class D51 {
         ];
     }
 
-    static get SMOKE1() {
-        return `
+    static get SMOKE() {
+        return [
+            `
                                    (  )  (@@)  ( )  (@)  ()    @@    O     @     O     @     O
                               (@@@)
                           (    )
                        (@@@@)
                      
-                     (   )`;
+                     (   )`,
+            `
+                                   (@@)  (  )  (@)  ( )   @    O     @     O     @     O     @
+                               (   )
+                          (@@@@)
+                        (    )
+                    
+                     (@@@)`
+        ];
     }
 }
 
