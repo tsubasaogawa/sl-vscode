@@ -2,9 +2,6 @@ const vscode = require('vscode');
 const define = require('./define');
 const { setTimeout } = require('timers/promises');
 
-const windowWidth = 60;
-const refreshRate = 40;
-
 module.exports = {
     run,
 }

@@ -20,7 +20,42 @@
 				"title": "sl",
 				"category": "sl"
 			}
-		]
+		],
+		"configuration": {
+			"title": "sl",
+			"properties": {
+				"sl.windowWidth": {
+					"type": "number",
+					"description": "Specify sl window width",
+					"default": 80
+				},
+				"sl.refreshRateMs": {
+					"type": "number",
+					"description": "Set the drawing interval milliseconds",
+					"default": 40
+				},
+				"sl.futureworks.slType": {
+					"type": "string",
+					"enum": [
+						"D51",
+						"SL",
+						"C51"
+					],
+					"default": "D51",
+					"description": "Select SL type"
+				},
+				"sl.futureworks.accident": {
+					"type": "boolean",
+					"description": "",
+					"default": false
+				},
+				"sl.futureworks.fly": {
+					"type": "boolean",
+					"description": "",
+					"default": false
+				}
+			}
+		}
 	},
 	"scripts": {
 		"lint": "eslint .",
