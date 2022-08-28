@@ -12,7 +12,7 @@ async function run() {
     const startLine = position.line;
     const config = vscode.workspace.getConfiguration('sl');
 
-    for (let i = 0; i < define.D51.width; i++) {
+    for (let i = 0; i < Math.max(define.D51.width, config.windowWidth); i++) {
         await draw(editor, config, startLine, i);
         await setTimeout(config.refreshRateMs);
     }
