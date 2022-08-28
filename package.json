@@ -1,13 +1,20 @@
 {
-	"name": "sl",
-	"displayName": "sl",
-	"description": "sl for vscode",
-	"version": "0.0.1",
+	"name": "sl-vscode",
+	"displayName": "sl-vscode",
+	"publisher": "tsubasaogawa",
+	"description": "Run sl in your VSCode",
+	"version": "0.0.0",
 	"engines": {
 		"vscode": "^1.69.0"
 	},
 	"categories": [
 		"Other"
+	],
+	"keywords": [
+		"train",
+		"joke",
+		"steam",
+		"locomotive"
 	],
 	"activationEvents": [
 		"onCommand:sl.run"
@@ -56,6 +63,10 @@
 				}
 			}
 		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tsubasaogawa/sl-vscode.git"
 	},
 	"scripts": {
 		"lint": "eslint .",
