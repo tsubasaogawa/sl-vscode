@@ -3,7 +3,7 @@
 	"displayName": "sl-vscode",
 	"publisher": "tsubasaogawa",
 	"description": "Run sl in your VSCode",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.69.0"
 	},
@@ -19,6 +19,7 @@
 	"activationEvents": [
 		"onCommand:sl.run"
 	],
+	"icon": "icon.png",
 	"main": "./src/extension.js",
 	"contributes": {
 		"commands": [
